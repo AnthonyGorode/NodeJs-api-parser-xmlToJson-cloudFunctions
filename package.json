@@ -1,0 +1,25 @@
+{
+  "name": "api_parse_feed",
+  "version": "1.0.0",
+  "description": "api for parse feed xml to json",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fast-xml-parser": "^3.16.0",
+    "feedparser": "^2.2.9",
+    "he": "^1.2.0",
+    "http": "0.0.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
