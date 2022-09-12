@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 const feedRoutes = require("./routes/feeds.routing");
+const usersRoutes = require("./routes/users.routing");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -22,6 +23,7 @@ app.use((req,res,next) => {
 });
 
 app.use("/api/feed",feedRoutes);
+app.use("/api/users",usersRoutes);
 
 app.use("/",(req,res,next) => {
     res.status(200).json({

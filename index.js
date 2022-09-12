@@ -44,7 +44,7 @@ const onListening = () => {
   debug("Listening on " + bind);
 };
 
-const port = normalizePort(process.env.PORT || "3000");
+const port = normalizePort(process.env.PORT || "8080");
 app.set("port", port);
 
 const server = http.createServer(app);
@@ -54,4 +54,4 @@ server.listen(port,() => {
     console.log(`Listening to the port ${port}`);
 });
 
-exports.app = functions.https.onRequest(app);
+// exports.app = functions.https.onRequest(app);
