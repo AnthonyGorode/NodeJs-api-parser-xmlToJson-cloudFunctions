@@ -1,13 +1,12 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 
 const app = express();
 
 const feedRoutes = require("./routes/feeds.routing");
 const usersRoutes = require("./routes/users.routing");
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
 app.use((req,res,next) => {
     res.setHeader("Access-Control-Allow-Origin","*");
